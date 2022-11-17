@@ -1,0 +1,229 @@
+:root{
+    --white: rgb(248 250 252);
+    --dark: rgb(15 23 42);
+}
+.primary-btn{
+    text-decoration: none;
+    padding: .7rem 2.5rem;
+    font-size: 1rem;
+    line-height: 1.5rem;
+    font-weight: 600;
+    border-radius: 0.15rem;
+    text-transform: uppercase;
+    transition: .3s ease;
+}
+
+.white-btn{
+    color: var(--dark);
+    background-color: var(--white);
+}
+.white-btn:hover{
+    color: var(--white);
+    background-color: var(--dark);
+}
+.dark-btn{
+    color: var(--white);
+    background-color: var(--dark)
+}
+.dark-btn:hover{
+    color: var(--dark);
+    background-color: var(--white)
+}
+
+.tab-button{
+    padding: .5rem 1rem;
+    position: relative;
+    margin: 0rem 2rem;
+    color: var(--dark);
+    font-size: 1.25rem;
+    font-weight: 600;
+    border: none;
+    background: transparent;
+}
+
+.tab-button:after{
+    content: '';
+    height: 2px;
+    background: transparent;
+    width: 100%;
+    position: absolute;
+    bottom: -4%;
+    left: 0;
+    transition: .3s ease;
+}
+
+.tab-button:hover:after{
+    background-color: var(--dark);
+}
+
+
+
+.home-banner{
+    position: relative;
+    height: calc(100vh - 90px);
+}
+.banner-footer{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: .8rem 0;
+    font-weight: 600;
+    color: var(--white);
+    background-color: var(--dark);
+}
+.quiz-link{
+    color: var(--white);
+}
+.home-best-selling{
+    padding: 1.5rem 0 3rem;
+}
+.banner-content{
+    padding-top: 55vh;
+    color: var(--white);
+}
+.owl-carousel .owl-stage-outer {
+     overflow: visible;
+}
+.section-header {
+    text-align: center;
+    margin-top: 2rem;
+    font-weight: 800;
+}
+.shoos-image img{
+    width: 100%;
+    height: 600px;
+    object-fit: cover;
+    object-position: center;
+}
+
+.shop-now-btn{
+    padding: .8rem 6rem;
+    border: 1.5px solid var(--dark);
+}
+.subscribe-form{
+    display: flex;
+}
+.subscribe-form .subscribe-input{
+    flex: 15;
+    padding: 0.5rem 1rem;
+    border: 2px solid transparent;
+    border-bottom: 2px solid black;
+    transition: .3s ease;
+    /* box-shadow: 0px -1px 1px 2px #594444; */
+    border-radius: 3px;
+    outline: 0;
+}
+.subscribe-form .primary-btn{
+    flex: 2;
+}
+
+
+.subscribe-input:focus {
+    border: 2px solid var(--dark);
+}
+.sign-up{
+    background-color: rgb(248, 247, 245);
+}
+
+.footer{
+    background-color: var(--dark);
+}
+.announcement{
+    background-color: rgb(9, 83, 83);
+}
+.product-image {
+    overflow: hidden;
+}
+
+.product-image img {
+    transition: 1s ease;
+}
+
+.best-product:hover .product-image img {
+    transform: scale(1.1);
+}
+
+.product .product-image{
+    position: relative;
+}
+.popup-button{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    opacity: 0;
+    background: #00000059;
+    transition: .3s ease;
+}
+.popup-button .primary-btn {
+    width: 250px;
+    padding: .7rem 2rem;
+    text-align: center;
+}
+.product-image-one{
+    position: relative;
+    overflow: hidden;
+}
+
+.product-image-one:hover .popup-button{
+    opacity: 1;
+}
+
+.product-image-one img{
+    transition: 1s ease;
+}
+
+.product-image-one:hover img{
+    transform: scale(1.2);
+}
+ul.Footer__link-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+h3.Footer__heading.Typography--quaternary-heading.Typography--with-margin {
+    color: var(--white);
+}
+
+a.Footer__link {
+    text-decoration: none;
+    font-size: 14px;
+    color: var(--white);
+    display: block;
+}
+
+ul.Footer__country-flags-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+p.Footer__social-icons-description.Typography--paragraph {
+    color: var(--white);
+}
+a.Footer__link:hover {
+    color: var(--white);
+}
+.banner-text {
+    text-shadow: 1px 4px 8px #161212;
+}
+li.Footer__country-flags-list-item {
+    margin-right: 5px;
+}
+img.country-flag {
+    width: 25px;
+    height: 100%;
+    margin-right: 5px;
+}
+
+a.nav-link {
+    font-weight: 600;
+}

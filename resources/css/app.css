@@ -1,0 +1,43 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+.collapse.navbar-collapse {
+    visibility: unset;
+}
+.primary-btn{
+    text-decoration: none;
+    padding: .5rem 2.5rem;
+    font-size: 1rem;
+    line-height: 1.5rem;
+    font-weight: 600;
+    border-radius: 0.125rem;
+    text-transform: uppercase;
+    @apply mr-4;
+    @apply bg-slate-200;
+    @apply transition;
+    @apply duration-200;
+    @apply text-slate-900;
+    @apply hover:bg-slate-900;
+    @apply hover:text-slate-100;
+}
+
+.tab-button{
+    padding: .5rem 1rem;
+    position: relative;
+    margin: 0rem 2rem;
+    @apply text-slate-900;
+    @apply text-base;
+    @apply font-semibold;
+    @apply hover:after:bg-slate-900;
+}
+.tab-button:after{
+    content: '';
+    height: 2px;
+    background: transparent;
+    width: 100%;
+    position: absolute;
+    bottom: -4%;
+    left: 0;
+    @apply transition;
+    @apply duration-300;
+}
