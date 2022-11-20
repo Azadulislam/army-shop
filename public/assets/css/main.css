@@ -34,10 +34,7 @@
 
 
 
-.home-banner{
-    position: relative;
-    height: calc(100vh - 90px);
-}
+
 .banner-footer{
     position: absolute;
     bottom: 0;
@@ -141,6 +138,7 @@
 .product-image-one{
     position: relative;
     overflow: hidden;
+    height: 280px;
 }
 
 .product-image-one:hover .popup-button{
@@ -185,7 +183,7 @@ a.Footer__link:hover {
     color: var(--white);
 }
 .banner-text {
-    text-shadow: 1px 4px 8px #161212;
+    text-shadow: 6px 12px 16px #161212;
 }
 img.country-flag {
     width: 25px;
@@ -201,4 +199,3 @@ a.nav-link {
     @extend nav-color;
     color: var(--nav_color);
 }
-

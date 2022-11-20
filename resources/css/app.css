@@ -156,3 +156,21 @@ button.cart-close {
 .products .col-md-10{
         max-width: 81%;
     }
+
+.home-banner{
+    position: relative;
+    height: calc(100vh - 110px);
+    z-index: 1;
+    background-position: 100% 76%;
+}
+section.banner-overly:after {
+    content: '';
+    background: #464646;
+    opacity: .55;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    z-index: -1;
+}

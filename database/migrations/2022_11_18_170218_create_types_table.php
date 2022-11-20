@@ -15,7 +15,7 @@ return new class extends Migration
     {
         Schema::create('types', function (Blueprint $table) {
             $table->id('id');
-            $table->string('name', 255)->comment('Which type of product form men women or kids.');
+            $table->string('name', 255)->comment('Which type of product form men women or kids.')->unique();
             $table->string('slug', 255)->comment('Url format of name.');
             $table->timestamps();
         });

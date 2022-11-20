@@ -58,6 +58,20 @@ class HomeController extends Controller
         $categories = Category::all();
         $subCategories = SubCategory::all();
         $types = Type::all();
-        return view('products', compact('categories', 'subCategories', 'types', 'url', 'current'));
+        $products = Product::paginate(12);
+        if($request->subcategory || $request->type){
+            $products = Product::all();
+            if(isset($request->subcategory)){
+                $products = $products->where('sub_category_id','=', SubCategory::where('slug', 'LIKE', $request->subcategory)->first()->id);
+            }
+            if(isset($request->type)){
+                $products = $products->where('type_id','=', Type::where('slug', 'LIKE', $request->type)->first()->id);
+            }
+        }
+
+//        $paginator = new Paginator($products, 2);
+//        dd($paginator);
+
+        return view('products', compact('categories', 'subCategories', 'types', 'url', 'current', 'products', 'request'));
     }
 }

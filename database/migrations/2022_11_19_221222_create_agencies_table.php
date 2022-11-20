@@ -15,7 +15,7 @@ return new class extends Migration
     {
         Schema::create('agencies', function (Blueprint $table) {
             $table->id();
-            $table->string('name', 255);
+            $table->string('name', 255)->unique();
             $table->string('item_code', 255);
             $table->enum('type', ['Government', 'Non Government']);
             $table->timestamps();

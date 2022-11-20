@@ -20,7 +20,7 @@
     @vite([ 'resources/sass/app.scss', 'resources/js/app.js', 'resources/css/app.css'])
 </head>
 <body>
-    <div id="app" class="overflow-hidden">
+    <div id="app" class="">
         <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm d-none">
             <div class="container">
                 <a class="navbar-brand" href="{{ url('/') }}">
@@ -82,7 +82,7 @@
                                                                                           href="#">*Details</a></p>
             </div>
         </header>
-        <nav class="navbar navbar-expand-lg bg-light">
+        <nav class="navbar navbar-expand-lg bg-light sticky-top">
             <div class="container">
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -109,11 +109,14 @@
                 {{--            </div>--}}
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav mb-2 mb-lg-0">
-                        <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="#">MAN</a>
-                        </li>
+{{--                        <li class="nav-item">--}}
+{{--                            <a class="nav-link active" aria-current="page" href="#">MEN</a>--}}
+{{--                        </li>--}}
                         <li class="nav-item">
                             <a class="nav-link" href="#">Company</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ route('products') }}">Products</a>
                         </li>
 
                     </ul>
@@ -127,14 +130,14 @@
                 </div>
 
                 <ul class="navbar-nav m-2 p-0 mb-lg-0 d-flex align-items-center flex-row">
+{{--                    <li class="nav-item">--}}
+{{--                        <a class="nav-link px-2" href="#"><i class="fa-regular fa-user"></i></a>--}}
+{{--                    </li>--}}
                     <li class="nav-item">
-                        <a class="nav-link px-2" href="#"><i class="fa-regular fa-user"></i></a>
+                        <a onclick="cartToggle(event)" class="nav-link px-2 text-xl" href="#"><i class="bi bi-cart"></i></a>
                     </li>
                     <li class="nav-item">
-                        <a onclick="cartToggle(event)" class="nav-link px-2" href="#"><i class="fa-solid fa-cart-plus"></i></a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link px-2" href="{{ route('help') }}"><i class="fa-regular fa-circle-question"></i></a>
+                        <a class="nav-link px-2 text-xl" href="{{ route('help') }}"><i class="fa-regular fa-circle-question"></i></a>
                     </li>
                 </ul>
                 <div class="language-change dropdown dropstart m-1 p-0 mb-lg-0">
@@ -153,29 +156,14 @@
             @yield('content')
         </main>
         {{--Sing Up Start--}}
-        <section class="sign-up" id="sign_up">
-            <div class="container pt-4 pb-5">
-                <div class="shop-kids-text text-center pb-4">
-                    <h1 class="section-header">
-                        Want To be the first to know?
-                    </h1>
-                    <p class="mb-0 fs-5 col-lg-6 col-md-8 col-12 mx-auto">Join our email list and be the first to know about new limited edition products, material innovations, and lots of other fun updates.</p>
-                    <div class="py-3">
-                        <form action="#" class="subscribe-form col-lg-7 col-md-8 col-12 mx-auto">
-                            <input class="subscribe-input me-3" type="email" name="" placeholder="Enter Your Email Address">
-                            <button class="primary-btn dark-btn d-inline-block">Sign Up</button>
-                        </form>
-                    </div>
-                    <p class="mb-0 fs-6 col-lg-6 col-md-8 col-12 mx-auto">Note: You can opt-out at any time.</p>
-                </div>
-            </div>
-        </section>
+
         {{--Sign Up End--}}
         {{--Footer start --}}
         <footer class="footer py-5">
             <div class="container">
                 <div class="row pb-4">
-                    <div class="col-md-3">
+
+                    <div class="col-md-4">
                         <h3 class="Footer__heading Typography--quaternary-heading Typography--with-margin">Help</h3>
                         <ul class="Footer__link-list"><li class="Footer__link-list-item">
                                 <a class="Footer__link" href="tel:18889638944">03 4252 5555</a>
@@ -183,26 +171,10 @@
                                 <a class="Footer__link" href="sms:18142519966">012 272 3722 (Whatsapp)</a>
                             </li><li class="Footer__link-list-item">
                                 <a class="Footer__link" href="mailto:help@allbirds.com">help@salingerti.com.my</a>
-                            </li><li class="Footer__link-list-item">
-                                <a class="Footer__link" href="#">Returns/Exchanges</a>
-                            </li><li class="Footer__link-list-item">
-                                <a class="Footer__link" href="#">FAQ/Contact Us</a>
-                        </ul>
-                    </div>
-                    <div class="col-md-3">
-                        <h3 class="Footer__heading Typography--quaternary-heading Typography--with-margin">Shop</h3>
-                        <ul class="Footer__link-list"><li class="Footer__link-list-item">
-                                <a class="Footer__link" href="#">Men's Clothes</a>
-                            </li><li class="Footer__link-list-item">
-                                <a class="Footer__link" href="#">Women's Clothes</a>
-                            </li><li class="Footer__link-list-item">
-                                <a class="Footer__link" href="#">Men's Accessories</a>
-                            </li><li class="Footer__link-list-item">
-                                <a class="Footer__link" href="#">Women's Accessories</a>
                             </li>
                         </ul>
                     </div>
-                    <div class="col-md-6">
+                    <div class="col-md-4">
                         <h3 class="Footer__heading Typography--quaternary-heading Typography--with-margin">Company</h3>
                         <ul class="Footer__link-list">
                             <li class="Footer__link-list-item">
@@ -214,60 +186,21 @@
                             </li>
                         </ul>
                     </div>
-                </div>
-                <div class="row my-4">
-                    <div class="col-md-3 d-none">
-                        <h3 class="Footer__heading Typography--quaternary-heading Typography--with-margin">Follow the Flock</h3>
-                        <p class="Footer__social-icons-description Typography--paragraph">Exclusive offers, a heads up on new things. Oh, we have cute sheep, too. #weareallbirds</p>
-                        <div>
-                            <a href="#"><i class="fa-reg"></i></a>
-                        </div>
-                    </div>
-                    {{--                <div class="col-md-3 d-none">--}}
-                    {{--                    <img src="//cdn.allbirds.com/image/upload/f_auto,q_auto/cms/1X4EOQF1JJOjMbo48vDUzB/c249da5825f9ae39f1f53bdb90d65285/icon-b-corp.svg" alt="">--}}
-                    {{--                </div>--}}
                     <div class="col-md-4">
                         <ul class="Footer__country-flags-list">
                             <li class="Footer__country-flags-list-item">
                                 <a class="Footer__country-flag-link" aria-label="United States" href="#">
-                                    <img class="Footer__country-flag Lazy--loaded" alt="US flag" src="{{ asset('assets/flag/malaysia.png') }}">
+                                    <img class="Footer__country-flag Lazy--loaded h-[23px] w-100" alt="US flag" src="{{ asset('assets/flag/malaysia.png') }}">
                                 </a>
-                            </li><li class="Footer__country-flags-list-item">
-                                <a class="Footer__country-flag-link" aria-label="New Zealand" href="#">
-                                    <img class="Footer__country-flag Lazy--loaded" data-src="//cdn.allbirds.com/image/upload/q_auto/cms/22gqFXi2QPoT2IhEpBuzOi/d01a77d603e94a10b8a690deded124f7/flag-nz.svg" alt="Shop Flag - NZ" src="//cdn.allbirds.com/image/upload/q_auto/cms/22gqFXi2QPoT2IhEpBuzOi/d01a77d603e94a10b8a690deded124f7/flag-nz.svg">
-                                </a>
-                            </li><li class="Footer__country-flags-list-item">
-                                <a class="Footer__country-flag-link" aria-label="Australia" href="#">
-                                    <img class="Footer__country-flag Lazy--loaded" data-src="//cdn.allbirds.com/image/upload/q_auto/cms/6FnrOphj9NsjD38uREtsBn/cbf3c42e92a6c0628da4462b04e92e2c/flag-au.svg" alt="Shop Flag - AU" src="//cdn.allbirds.com/image/upload/q_auto/cms/6FnrOphj9NsjD38uREtsBn/cbf3c42e92a6c0628da4462b04e92e2c/flag-au.svg">
-                                </a>
-                            </li><li class="Footer__country-flags-list-item">
-                                <a class="Footer__country-flag-link" aria-label="Canada" href="#">
-                                    <img class="Footer__country-flag Lazy--loaded" data-src="//cdn.allbirds.com/image/upload/q_auto/cms/mpzswQHoLPhzgFkXpcZ7P/eba356c7c7929352d5d3eea6999f5ad3/flag-ca.svg" alt="Shop Flag - CA" src="//cdn.allbirds.com/image/upload/q_auto/cms/mpzswQHoLPhzgFkXpcZ7P/eba356c7c7929352d5d3eea6999f5ad3/flag-ca.svg">
-                                </a>
-                            </li><li class="Footer__country-flags-list-item">
+                            </li>
+                            <li class="Footer__country-flags-list-item">
                                 <a class="Footer__country-flag-link" aria-label="UK" href="#">
                                     <img class="Footer__country-flag Lazy--loaded" data-src="//cdn.allbirds.com/image/upload/q_auto/cms/5OVl6dmwlwOJPrg5F3Ot1s/e9679772ddd64de49cd96cbd4a819743/flag-uk.svg" alt="Shop Flag - UK" src="//cdn.allbirds.com/image/upload/q_auto/cms/5OVl6dmwlwOJPrg5F3Ot1s/e9679772ddd64de49cd96cbd4a819743/flag-uk.svg">
                                 </a>
-                            </li><li class="Footer__country-flags-list-item">
-                                <a class="Footer__country-flag-link" aria-label="China" href="#">
-                                    <img class="Footer__country-flag Lazy--loaded" data-src="//cdn.allbirds.com/image/upload/q_auto/cms/2bpMfDa3leuCSpX1lLXKvB/19c74fd77f850e29497ad82d91e83292/flag-cn.svg" alt="Shop Flag - China" src="//cdn.allbirds.com/image/upload/q_auto/cms/2bpMfDa3leuCSpX1lLXKvB/19c74fd77f850e29497ad82d91e83292/flag-cn.svg">
-                                </a>
-                            </li><li class="Footer__country-flags-list-item">
-                                <a class="Footer__country-flag-link" aria-label="EU" href="#">
-                                    <img class="Footer__country-flag Lazy--loaded" data-src="//cdn.allbirds.com/image/upload/q_auto/cms/5DEtULZUsBHTJp8aXcaOIc/c9d3ff14bde3bf45235f906dfb63f649/method-draw-image.svg" alt="EU Flag" src="//cdn.allbirds.com/image/upload/q_auto/cms/5DEtULZUsBHTJp8aXcaOIc/c9d3ff14bde3bf45235f906dfb63f649/method-draw-image.svg">
-                                </a>
-                            </li><li class="Footer__country-flags-list-item">
-                                <a class="Footer__country-flag-link" aria-label="JP" href="#">
-                                    <img class="Footer__country-flag Lazy--loaded" data-src="//cdn.allbirds.com/image/upload/q_auto/cms/3TWBjQxibzqkiXua4hrmCu/1730ec7122e70b26bd29d972733a8190/Japan-Flag.svg" alt="Japan flag icon" src="//cdn.allbirds.com/image/upload/q_auto/cms/3TWBjQxibzqkiXua4hrmCu/1730ec7122e70b26bd29d972733a8190/Japan-Flag.svg">
-                                </a>
-                            </li><li class="Footer__country-flags-list-item">
-                                <a class="Footer__country-flag-link" aria-label="KR" href="#">
-                                    <img class="Footer__country-flag Lazy--loaded" data-src="//cdn.allbirds.com/image/upload/q_auto/cms/lqp21Rk7GI8HTImpSTOip/cdb1a8e18b337c27e91c18b82dd93ddf/South-Korea-Flag.svg" alt="South Korea flag icon" src="//cdn.allbirds.com/image/upload/q_auto/cms/lqp21Rk7GI8HTImpSTOip/cdb1a8e18b337c27e91c18b82dd93ddf/South-Korea-Flag.svg">
-                                </a>
-                            </li></ul>
+                            </li>
+                        </ul>
                     </div>
                 </div>
-            </div>
         </footer>
         {{--Footer end --}}
     </div>

@@ -3,17 +3,17 @@
     @section('content')
 
     {{--    Banner Start--}}
-    <section id="banner" class="home-banner" style="background-image: url('{{ asset('images/banner.png') }}')">
+    <section id="banner" class="home-banner banner-overly" style="background-image: url('{{ asset('images/banner.jpg') }}')">
         <div class="container-lg">
             <div class="banner-content d-flex justify-content-end flex-column h-100">
                 <div class="banner-text ">
                     <h1 class="fs-1 fw-semibold mb-3">Celebrate Hari Merdeka with all proudness and jubilant.</h1>
                     <h5 class="text-base fw-semibold mb-4">Beautiful uniforms and accessories to choose from.</h5>
                 </div>
-                <div class="d-flex flex-start">
-                    <a class="primary-btn white-btn me-4" href="{{ route('products') }}?type=men">Shop Men</a>
-                    <a class="primary-btn white-btn" href="#">Shop Women</a>
-                </div>
+{{--                <div class="d-flex flex-start">--}}
+{{--                    <a class="primary-btn white-btn me-4" href="{{ route('products') }}?type=men">Shop Men</a>--}}
+{{--                    <a class="primary-btn white-btn" href="#">Shop Women</a>--}}
+{{--                </div>--}}
             </div>
         </div>
         <div class="banner-footer">
@@ -387,7 +387,7 @@
     {{--Sustainable product End--}}
 
     {{--Sotries Start--}}
-    <section class="stories" id="stories">
+    <section class="stories overflow-hidden" id="stories">
         <div class="container-lg pt-3 pb-5">
             <div class="stories-text pb-4">
                 <h1 class="section-header text-start mb-4">
@@ -416,47 +416,21 @@
                         </div>
                         <div class="details px-4 py-3">
                             <div class="product-name fs-3 fw-semibold">
-                                {{ $suc->item_name }}
+                                {{ substr($suc->web_ad_title, 0, 25) }}@if(strlen($suc->web_ad_title)> 25)...@endif
                             </div>
-                            <div class="product-category fs-5">
-                                Limited Edition Color, Natural White
+                            <div class="product-category fs-5 h-[3rem]">
+                                {{ $suc->web_ad_sub_title }}
                             </div>
                         </div>
                     </div>
                     @endforeach
-                    <div class="best-product shadow-lg">
-                        <div class="product-image">
-                            <img src="{{ asset('images/product.jpg') }}" alt="">
-                        </div>
-                        <div class="details px-4 py-3">
-                            <div class="product-name fs-3 fw-semibold">
-                                Men's Wool Dasher Fluff
-                            </div>
-                            <div class="product-category fs-5">
-                                Limited Edition Color, Natural White
-                            </div>
-                        </div>
-                    </div>
-                    <div class="best-product shadow-lg">
-                        <div class="product-image">
-                            <img src="{{ asset('images/product.jpg') }}" alt="">
-                        </div>
-                        <div class="details px-4 py-3">
-                            <div class="product-name fs-3 fw-semibold">
-                                Men's Wool Dasher Fluff
-                            </div>
-                            <div class="product-category fs-5">
-                                Limited Edition Color, Natural White
-                            </div>
-                        </div>
-                    </div>
 
                 </div>
             </div>
         </div>
     </section>
     {{--Stories End--}}
-
+    @include('layouts.sign-up')
 @endsection
 
 @section('script')
