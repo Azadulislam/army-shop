@@ -11,7 +11,7 @@
                     <h5 class="text-base fw-semibold mb-4">Beautiful uniforms and accessories to choose from.</h5>
                 </div>
                 <div class="d-flex flex-start">
-                    <a class="primary-btn white-btn me-4" href="#">Shop Men</a>
+                    <a class="primary-btn white-btn me-4" href="{{ route('products') }}?type=men">Shop Men</a>
                     <a class="primary-btn white-btn" href="#">Shop Women</a>
                 </div>
             </div>
@@ -59,7 +59,7 @@
                                     Combat
                                 </div>
                                 <div class="product-category fs-5 d-flex align-items-center">
-                                    <span class="me-2"><i class="fa-brands fa-cloudflare fa-2x"></i></span>Cozy Attire
+                                    <span class="me-2 text-2xl"><i class="bi bi-clouds"></i></span>Cozy Attire
                                 </div>
                             </div>
                         </div>
@@ -76,7 +76,7 @@
                                     Royal Events
                                 </div>
                                 <div class="product-category fs-5 d-flex align-items-center">
-                                    <span class="me-2"><i class="fa-brands fa-cloudflare fa-2x"></i></span>Cozy Boot
+                                    <span class="me-2 text-2xl"><i class="bi bi-clouds"></i></span>Cozy Boot
                                 </div>
                             </div>
                         </div>
@@ -93,7 +93,7 @@
                                     Great Runner
                                 </div>
                                 <div class="product-category fs-5 d-flex align-items-center">
-                                    <span class="me-2"><i class="fa-brands fa-cloudflare fa-2x"></i></span>Speedy Shoes
+                                    <span class="me-2 text-2xl"><i class="bi bi-clouds"></i></span>Speedy Shoes
                                 </div>
                             </div>
                         </div>
@@ -216,7 +216,7 @@
     </section>
     {{--Best Selling End--}}
     <section class="shoos-image">
-        <img src="{{ asset('images/hero-two.avif') }}" alt="">
+        <img src="{{ asset('images/military.jpg') }}" alt="">
     </section>
 
     {{--Shop Now Start--}}
@@ -394,6 +394,7 @@
                     Success Stories
                 </h1>
                 <div class="owl-carousel" id="stories_carousel">
+                    @if($successes->count() < 1)
                     <div class="best-product shadow-lg">
                         <div class="product-image">
                             <img src="{{ asset('images/product.jpg') }}" alt="">
@@ -407,19 +408,22 @@
                             </div>
                         </div>
                     </div>
+                    @endif
+                    @foreach($successes as $suc)
                     <div class="best-product shadow-lg">
                         <div class="product-image">
                             <img src="{{ asset('images/product.jpg') }}" alt="">
                         </div>
                         <div class="details px-4 py-3">
                             <div class="product-name fs-3 fw-semibold">
-                                Men's Wool Dasher Fluff
+                                {{ $suc->item_name }}
                             </div>
                             <div class="product-category fs-5">
                                 Limited Edition Color, Natural White
                             </div>
                         </div>
                     </div>
+                    @endforeach
                     <div class="best-product shadow-lg">
                         <div class="product-image">
                             <img src="{{ asset('images/product.jpg') }}" alt="">

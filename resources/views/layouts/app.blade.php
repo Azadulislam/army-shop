@@ -76,9 +76,9 @@
                 </div>
             </div>
         </nav>
-        <header class="py-3 announcement">
+        <header class="py-2 announcement">
             <div class="container">
-                <p class="mb-0 text-center text-white fs-5" >15% off for Hari Merdeka. <a class="text-white"
+                <p class="mb-0 text-center text-white fs-6" >15% off for Hari Merdeka. <a class="text-white"
                                                                                           href="#">*Details</a></p>
             </div>
         </header>

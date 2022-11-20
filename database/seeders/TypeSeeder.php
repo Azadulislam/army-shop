@@ -19,7 +19,7 @@ class TypeSeeder extends Seeder
     {
         $data = [
             ['name'=> 'Men', 'slug' => Str::slug('Men')],
-            ['name'=> 'Women', 'slug' => Str::slug('Men')]
+            ['name'=> 'Women', 'slug' => Str::slug('Women')]
         ];
 
         Type::insert($data);

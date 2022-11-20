@@ -9,6 +9,16 @@
     color: var(--dark);
     background-color: var(--white);
 }
+.tab-button{
+    padding: .5rem 1rem;
+    position: relative;
+    margin: 0rem 2rem;
+    color: var(--dark);
+    font-size: 1.25rem;
+    font-weight: 600;
+    border: none;
+    background: transparent;
+}
 
 .white-btn:hover{
     color: var(--white);
@@ -128,3 +138,21 @@ button.cart-close {
     top: -39px;
     left: -33px;
 }
+
+.products-tab-button{
+    @apply tab-button;
+    font-size: .9rem;
+    padding: .5rem 1rem;
+    margin: 0;
+}
+
+.search-item{
+    cursor: pointer;
+}
+
+.products .col-md-2{
+        max-width: 18%;
+    }
+.products .col-md-10{
+        max-width: 81%;
+    }

@@ -2,8 +2,12 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Category;
 use App\Models\NewArrival;
 use App\Models\Product;
+use App\Models\SubCategory;
+use App\Models\Success;
+use App\Models\Type;
 use Illuminate\Http\Request;
 use Illuminate\Pagination\Paginator;
 
@@ -27,8 +31,8 @@ class HomeController extends Controller
     public function index()
     {
         $paginator = Paginator::class;
-        $arrivals = Product::paginate(10);
-        return view('home');
+        $successes = Success::paginate(10);
+        return view('home', compact('successes'));
     }
 
     public function shop(){
@@ -39,7 +43,21 @@ class HomeController extends Controller
         return view('helps');
     }
 
-    public function products(){
-        return view('products');
+    public function products(Request $request){
+
+        $url = url()->full();
+        $current = url()->current();
+
+        if($request->input('type')){
+            $type = $request->type;
+        }
+        if($request->sub_category){
+            $type = $request->type;
+        }
+//        dd($url);
+        $categories = Category::all();
+        $subCategories = SubCategory::all();
+        $types = Type::all();
+        return view('products', compact('categories', 'subCategories', 'types', 'url', 'current'));
     }
 }
