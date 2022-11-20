@@ -1,26 +1,12 @@
 :root{
     --white: rgb(248 250 252);
     --dark: rgb(15 23 42);
+    --nav_color: #4A3837;
 }
-.primary-btn{
-    text-decoration: none;
-    padding: .7rem 2.5rem;
-    font-size: 1rem;
-    line-height: 1.5rem;
-    font-weight: 600;
-    border-radius: 0.15rem;
-    text-transform: uppercase;
-    transition: .3s ease;
+.nav-color{
+     color: var(--nav_color);
 }
 
-.white-btn{
-    color: var(--dark);
-    background-color: var(--white);
-}
-.white-btn:hover{
-    color: var(--white);
-    background-color: var(--dark);
-}
 .dark-btn{
     color: var(--white);
     background-color: var(--dark)
@@ -85,11 +71,7 @@
 .owl-carousel .owl-stage-outer {
      overflow: visible;
 }
-.section-header {
-    text-align: center;
-    margin-top: 2rem;
-    font-weight: 800;
-}
+
 .shoos-image img{
     width: 100%;
     height: 600px;
@@ -162,7 +144,7 @@
     transition: .3s ease;
 }
 .popup-button .primary-btn {
-    width: 250px;
+    width: 70%;
     padding: .7rem 2rem;
     text-align: center;
 }
@@ -215,15 +197,18 @@ a.Footer__link:hover {
 .banner-text {
     text-shadow: 1px 4px 8px #161212;
 }
-li.Footer__country-flags-list-item {
-    margin-right: 5px;
-}
 img.country-flag {
     width: 25px;
     height: 100%;
     margin-right: 5px;
 }
 
+
+
 a.nav-link {
     font-weight: 600;
+    text-transform: uppercase;
+    @extend nav-color;
+    color: var(--nav_color);
 }
+

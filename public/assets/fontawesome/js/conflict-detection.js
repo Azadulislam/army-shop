@@ -921,7 +921,7 @@
     // child iframes call postMessage with their results, and when the parent window
     // receives and handles those events with window.onmessage.
     // Making it configurable allows us to test the scenario where this timeout is exceeded.
-    // Naming it something very different from "timeout" is to help avoid the potential ambiguity between
+    // Naming it something very different from "timeout" is to helps.blade.php avoid the potential ambiguity between
     // these two timeout-related settings.
 
     var masterTimeout = WINDOW.FontAwesomeDetection.timeout + WINDOW.FontAwesomeDetection.resultsCollectionMaxWait;
