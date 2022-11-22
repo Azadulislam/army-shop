@@ -43,35 +43,7 @@ class HomeController extends Controller
         return view('helps');
     }
 
-    public function products(Request $request){
-
-        $url = url()->full();
-        $current = url()->current();
-
-        if($request->input('type')){
-            $type = $request->type;
-        }
-        if($request->sub_category){
-            $type = $request->type;
-        }
-//        dd($url);
-        $categories = Category::all();
-        $subCategories = SubCategory::all();
-        $types = Type::all();
-        $products = Product::paginate(12);
-        if($request->subcategory || $request->type){
-            $products = Product::all();
-            if(isset($request->subcategory)){
-                $products = $products->where('sub_category_id','=', SubCategory::where('slug', 'LIKE', $request->subcategory)->first()->id);
-            }
-            if(isset($request->type)){
-                $products = $products->where('type_id','=', Type::where('slug', 'LIKE', $request->type)->first()->id);
-            }
-        }
-
-//        $paginator = new Paginator($products, 2);
-//        dd($paginator);
-
-        return view('products', compact('categories', 'subCategories', 'types', 'url', 'current', 'products', 'request'));
+    public function company(){
+        return view('company');
     }
 }

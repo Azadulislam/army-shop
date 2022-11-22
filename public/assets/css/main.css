@@ -2,19 +2,12 @@
     --white: rgb(248 250 252);
     --dark: rgb(15 23 42);
     --nav_color: #4A3837;
+    --primary-color: #4A3838;
 }
 .nav-color{
      color: var(--nav_color);
 }
 
-.dark-btn{
-    color: var(--white);
-    background-color: var(--dark)
-}
-.dark-btn:hover{
-    color: var(--dark);
-    background-color: var(--white)
-}
 
 
 .tab-button:after{
@@ -77,7 +70,7 @@
     flex: 15;
     padding: 0.5rem 1rem;
     border: 2px solid transparent;
-    border-bottom: 2px solid black;
+    border-bottom: 2px solid var(--primary-color);
     transition: .3s ease;
     /* box-shadow: 0px -1px 1px 2px #594444; */
     border-radius: 3px;
@@ -89,18 +82,16 @@
 
 
 .subscribe-input:focus {
-    border: 2px solid var(--dark);
+    border: 2px solid var(--primary-color);
 }
 .sign-up{
     background-color: rgb(248, 247, 245);
 }
 
 .footer{
-    background-color: var(--dark);
+    background-color: var(--primary-color);
 }
-.announcement{
-    background-color: rgb(9, 83, 83);
-}
+
 .product-image {
     overflow: hidden;
 }
@@ -138,7 +129,6 @@
 .product-image-one{
     position: relative;
     overflow: hidden;
-    height: 280px;
 }
 
 .product-image-one:hover .popup-button{
@@ -151,6 +141,9 @@
 
 .product-image-one:hover img{
     transform: scale(1.2);
+}
+.products .product-image-one{
+    height: 280px;
 }
 ul.Footer__link-list {
     list-style: none;

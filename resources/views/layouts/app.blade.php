@@ -82,7 +82,7 @@
                                                                                           href="#">*Details</a></p>
             </div>
         </header>
-        <nav class="navbar navbar-expand-lg bg-light sticky-top">
+        <nav class="navbar navbar-expand-lg bg-light sticky-top shadow-sm">
             <div class="container">
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -107,26 +107,24 @@
                 {{--                    </li>--}}
                 {{--                </ul>--}}
                 {{--            </div>--}}
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <div class="collapse navbar-collapse flex-none" id="navbarSupportedContent">
                     <ul class="navbar-nav mb-2 mb-lg-0">
-{{--                        <li class="nav-item">--}}
-{{--                            <a class="nav-link active" aria-current="page" href="#">MEN</a>--}}
-{{--                        </li>--}}
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Company</a>
+                            <a class="nav-link" href="{{ route('home') }}">Home</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="{{ route('products') }}">Products</a>
+                            <a class="nav-link" href="{{ route('company') }}">Company</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ route('product.index') }}">Order Now</a>
                         </li>
 
                     </ul>
                 </div>
-                <div class="grow">
-                    <div class="">
-                        <a class="navbar-brand d-inline-block"  style="width: 80px; height: 50px" href="{{ route('home') }}">
-                            <img class="w-100 h-100" src="{{ asset('images/logo.png') }}" alt="">
-                        </a>
-                    </div>
+                <div class="text-center flex-1">
+                    <a class="navbar-brand d-inline-block"  style="width: 80px; height: 50px" href="{{ route('home') }}">
+                        <img class="w-100 h-100" src="{{ asset('images/logo.png') }}" alt="">
+                    </a>
                 </div>
 
                 <ul class="navbar-nav m-2 p-0 mb-lg-0 d-flex align-items-center flex-row">

@@ -3,9 +3,9 @@
 <section class="products">
     <div class="container py-5 px-4">
         <div class="row">
-            <div class="col-md-2 col-sm-3 col-12">
+            <div class="col-lg-2 col-md-4 col-sm-5 col-12">
                 <div class="border rounded h-100 p-3">
-                    <a class="pb-2" href="{{ route('products') }}"><i class="bi bi-x-lg"></i> Clear Search</a>
+                    <a class="pb-2" href="{{ route('product.index') }}"><i class="bi bi-x-lg"></i> Clear Search</a>
                     <ul class="categories list-unstyled">
                         @foreach($subCategories as $subCategory)
                         <li><label class="search-item" ><input type="radio" name="subcategory" class="hidden search-input" @if(isset($_GET['subcategory'])?$_GET['subcategory']:'' == $subCategory->slug) checked @endif value="{{ $subCategory->slug }}">{{ $subCategory->name }}</label></li>
@@ -19,7 +19,7 @@
                     </ul>
                 </div>
             </div>
-            <div class="col-md-10 col-sm-9 col-12">
+            <div class="col-lg-10 col-md-8 col-sm-7 col-12">
                 <div class="border rounded h-100 p-3">
                     <div class="row">
                         <div class="col-12">
@@ -33,7 +33,7 @@
                             </ul>
                         </div>
                         @forelse($products as $product)
-                            <div class="col-md-3 mb-3">
+                            <div class="col-md-6 col-lg-3 col-sm-12 col-12 mb-3">
                                 <div class="product shadow-lg">
                                     <div class="product-image-one">
                                         <img class="w-100" src="{{ asset('images/product.jpg') }}" alt="">

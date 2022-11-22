@@ -28,7 +28,7 @@
     </section>
     {{--Banner End--}}
     {{--best selling start--}}
-    <section id="best_selling" class="home-best-selling">
+    <section id="best_selling" class="home-best-selling overflow-hidden">
         <div class="container-lg">
             <h1 class="section-header mb-4">Our Best-Selling Gifts</h1>
             <ul class="nav nav-pills mb-3 border-bottom justify-content-center" id="pills-tab" role="tablist">
@@ -234,7 +234,7 @@
 {{--    </section>--}}
     {{--Shop Now End--}}
     {{--New Arrivals Start--}}
-    <section class="new-arrivals">
+    <section class="new-arrivals overflow-hidden">
         <div class="container-lg pt-3 pb-5">
             <div class="new-arrivals-text">
                 <h1 class="section-header text-start mb-4">

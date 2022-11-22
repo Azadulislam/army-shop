@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\ProductController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -23,4 +24,6 @@ Auth::routes();
 Route::get('/shop', [HomeController::class, 'shop'])->name('shop');
 Route::get('/', [HomeController::class, 'index'])->name('home');
 Route::get('/help', [HomeController::class, 'help'])->name('help');
-Route::get('/products', [HomeController::class, 'products'])->name('products');
+Route::get('/company', [HomeController::class, 'company'])->name('company');
+
+Route::resource('product', ProductController::class);
