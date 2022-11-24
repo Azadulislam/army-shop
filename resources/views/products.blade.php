@@ -24,30 +24,33 @@
                     <div class="row">
                         <div class="col-12">
                             <ul class="nav nav-pills mb-3 border-bottom justify-content-start" id="pills-tab" role="tablist">
+                                @foreach($categories as $category)
                                 <li class="" role="presentation">
-                                    <label class="products-tab-button text-uppercase"><input type="checkbox" name="category" class="hidden" value="On Duty">On Duty</label>
+                                    <label class="products-tab-button text-uppercase"><input type="checkbox" name="category" class="hidden" value="On Duty">
+                                        <label class="search-item" for="{{ $category->name }}"><input type="radio" name="category" class="hidden search-input">{{ $category->name }}</label>
+                                    </label>
                                 </li>
-                                <li class="" role="presentation">
-                                    <label class="products-tab-button text-uppercase"><input type="checkbox" name="category" class="hidden" value="Ceremonials">Ceremonials</label>
-                                </li>
+                                @endforeach
                             </ul>
                         </div>
                         @forelse($products as $product)
                             <div class="col-md-6 col-lg-3 col-sm-12 col-12 mb-3">
-                                <div class="product shadow-lg">
-                                    <div class="product-image-one">
-                                        <img class="w-100" src="{{ asset('images/product.jpg') }}" alt="">
-                                        <div class="popup-button">
-                                            <a class="primary-btn white-btn d-inline-block sm:text-sm text-xs" href="#">Shop Men</a>
-                                            <a class="primary-btn white-btn mt-2 d-inline-block sm:text-sm text-xs" href="#">Shop Women</a>
-                                        </div>
+                                <div class="best-product shadow-lg border border-gray-700 rounded">
+                                    <div class="product-image">
+                                        <a href="{{ route('product.view', $product->slug) }}">
+                                            <img src="{{ asset('images/product.jpg') }}" alt="">
+                                        </a>
                                     </div>
                                     <div class="details px-4 py-3">
-                                        <div class="product-name border-bottom text-lg fw-semibold">
-                                            {{ substr($product->name, 0, 22) }}@if(strlen($product->name)> 22)...@endif
+                                        <div class="product-name fs-3 fw-semibold">
+                                            {{ ttl($product->name, 16) }}
                                         </div>
-                                        <div class="product-category text-lg d-flex align-items-center">
-                                            <span class="me-2 text-2xl"><i class="bi bi-clouds"></i></span>{{ $product->category->name }}
+                                        <div class="product-category fs-5">
+                                            {{ ttl($product->description, 23) }}
+                                        </div>
+                                        <div class="order-btn flex justify-between mt-2">
+                                            <a href="#" class="font-semibold font-base text-red-500"></a>
+                                            <a href="#" class="font-semibold text-base   text-red-500">Buy Now</a>
                                         </div>
                                     </div>
                                 </div>
@@ -70,7 +73,6 @@
         </div>
     </div>
 </section>
-@include('layouts.sign-up')
 @endsection
 
 @section('script')

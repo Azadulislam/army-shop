@@ -2,7 +2,7 @@
 @section('content')
     <section class="company-banner py-36 banner-overly relative z-10" style="background-image: url('{{asset('images/banner.jpg')}}')">
         <div class="container-lg py-5">
-            <h1 class="text-7xl text-white text-center leading-normal">MOTHER NATURE </br>
+            <h1 class="text-7xl text-white text-center leading-normal invisible">MOTHER NATURE <br/>
                 MADE US DO IT</h1>
         </div>
     </section>
@@ -154,10 +154,10 @@
                     <p class="mb-2"><b>E-mail : </b> azri@salingerti.com.my</p>
                     <p><b>Our Mission Statement</b></p>
                     <p class="mb-2 pr-20">"To become a profitable, well managed company in garments and tailoring industry in Malaysia."</p>
-                    <p>Associate co’s :</p>
-                    <p>a) Kharisma Wira Sdn. Bhd.</p>
-                    <p>b) Usahawan PSE Sdn. Bhd.</p>
-                    <p class="mb-2">c) Dataran Satria (M) Sdn. Bhd. </p>
+{{--                    <p>Associate co’s :</p>--}}
+{{--                    <p>a) Kharisma Wira Sdn. Bhd.</p>--}}
+{{--                    <p>b) Usahawan PSE Sdn. Bhd.</p>--}}
+{{--                    <p class="mb-2">c) Dataran Satria (M) Sdn. Bhd. </p>--}}
 
 
 
@@ -175,37 +175,36 @@
                         Master in Management Science
                         Bachelor in Accountancy
                         Indiana University, USA</p>
-                    <p class="text-xl font-semibold"><b>Bank : </b></p>
-                    <div class="row mb-2">
-                        <div class="col-6">
-                            <p>MALAYAN BANKING BERHAD
-                                Cawangan Taman Setiawangsa
-                                Wisma Prima Peninsular,
-                                No. 2, Jalan Setiawangsa 11,
-                                Taman Setiawangsa,
-                                54200 Kuala Lumpur </p>
-                        </div>
-                        <div class="col-6">
-                            <p>BANK ISLAM MALAYSIA BERHAD
-                                Bandar Wawasan
-                                No. 4 & 6, Wisma RKT
-                                Jalan Raja Abdullah
-                                50300 Kuala Lumpur</p>
-                        </div>
-                    </div>
-                    <p class="mb-2"><b>Tel: </b>03-26948175/8192/8244</p>
-                    <p><b>Number of Employees : </b></p>
-                    <p> 20 x Management</p>
-                    <p>20 x Marketing</p>
-                    <p>4 x Technical Staffs</p>
-                    <p>3 x Account Department</p>
-                    <p>168 x Operators</p>
-                    <p>5 x Showroom & Boutique Staff</p>
+{{--                    <p class="text-xl font-semibold"><b>Bank : </b></p>--}}
+{{--                    <div class="row mb-2">--}}
+{{--                        <div class="col-6">--}}
+{{--                            <p>MALAYAN BANKING BERHAD--}}
+{{--                                Cawangan Taman Setiawangsa--}}
+{{--                                Wisma Prima Peninsular,--}}
+{{--                                No. 2, Jalan Setiawangsa 11,--}}
+{{--                                Taman Setiawangsa,--}}
+{{--                                54200 Kuala Lumpur </p>--}}
+{{--                        </div>--}}
+{{--                        <div class="col-6">--}}
+{{--                            <p>BANK ISLAM MALAYSIA BERHAD--}}
+{{--                                Bandar Wawasan--}}
+{{--                                No. 4 & 6, Wisma RKT--}}
+{{--                                Jalan Raja Abdullah--}}
+{{--                                50300 Kuala Lumpur</p>--}}
+{{--                        </div>--}}
+{{--                    </div>--}}
+{{--                    <p class="mb-2"><b>Tel: </b>03-26948175/8192/8244</p>--}}
+{{--                    <p><b>Number of Employees : </b></p>--}}
+{{--                    <p> 20 x Management</p>--}}
+{{--                    <p>20 x Marketing</p>--}}
+{{--                    <p>4 x Technical Staffs</p>--}}
+{{--                    <p>3 x Account Department</p>--}}
+{{--                    <p>168 x Operators</p>--}}
+{{--                    <p>5 x Showroom & Boutique Staff</p>--}}
                 </div>
             </div>
         </div>
     </section>
-    @include('layouts.sign-up')
 @endsection
 
 @section('script')

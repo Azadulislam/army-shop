@@ -209,3 +209,7 @@ section.banner-overly:after {
 .help{
     @apply text-green-500;
 }
+
+.primary-bg{
+    background-color: var(--primary-color);
+}

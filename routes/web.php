@@ -26,4 +26,6 @@ Route::get('/', [HomeController::class, 'index'])->name('home');
 Route::get('/help', [HomeController::class, 'help'])->name('help');
 Route::get('/company', [HomeController::class, 'company'])->name('company');
 
+
 Route::resource('product', ProductController::class);
+Route::get('product/{slug}', [ProductController::class, 'show'])->name('product.view');

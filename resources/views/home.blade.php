@@ -7,8 +7,8 @@
         <div class="container-lg">
             <div class="banner-content d-flex justify-content-end flex-column h-100">
                 <div class="banner-text ">
-                    <h1 class="fs-1 fw-semibold mb-3">Celebrate Hari Merdeka with all proudness and jubilant.</h1>
-                    <h5 class="text-base fw-semibold mb-4">Beautiful uniforms and accessories to choose from.</h5>
+                    <h1 class="fs-1 fw-semibold mb-3">Demi Keamanan sejagat...</h1>
+{{--                    <h5 class="text-base fw-semibold mb-4">Beautiful uniforms and accessories to choose from.</h5>--}}
                 </div>
 {{--                <div class="d-flex flex-start">--}}
 {{--                    <a class="primary-btn white-btn me-4" href="{{ route('products') }}?type=men">Shop Men</a>--}}
@@ -16,15 +16,15 @@
 {{--                </div>--}}
             </div>
         </div>
-        <div class="banner-footer">
-            <div class="container-lg">
-                <p class="mb-0 fs-6">
-                    <span class="font-semibold mr-1">Find The Perfect Gift</span>
-                    <span>Take Our Style Quiz to find the perfect pair.</span>
-                    <a class="quiz-link" href="#">Take the Style Quiz</a>
-                </p>
-            </div>
-        </div>
+{{--        <div class="banner-footer">--}}
+{{--            <div class="container-lg">--}}
+{{--                <p class="mb-0 fs-6">--}}
+{{--                    <span class="font-semibold mr-1">Find The Perfect Gift</span>--}}
+{{--                    <span>Take Our Style Quiz to find the perfect pair.</span>--}}
+{{--                    <a class="quiz-link" href="#">Take the Style Quiz</a>--}}
+{{--                </p>--}}
+{{--            </div>--}}
+{{--        </div>--}}
     </section>
     {{--Banner End--}}
     {{--best selling start--}}
@@ -419,7 +419,7 @@
                                 {{ substr($suc->web_ad_title, 0, 25) }}@if(strlen($suc->web_ad_title)> 25)...@endif
                             </div>
                             <div class="product-category fs-5 h-[3rem]">
-                                {{ $suc->web_ad_sub_title }}
+                                {{ substr($suc->web_ad_sub_title, 0, 50) }}@if(strlen($suc->web_ad_title)> 50)...@endif
                             </div>
                         </div>
                     </div>

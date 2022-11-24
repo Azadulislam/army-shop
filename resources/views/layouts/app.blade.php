@@ -176,7 +176,7 @@
                         <h3 class="Footer__heading Typography--quaternary-heading Typography--with-margin">Company</h3>
                         <ul class="Footer__link-list">
                             <li class="Footer__link-list-item">
-                                <a class="Footer__link" href="https://stores.allbirds.com">Company Profile</a>
+                                <a class="Footer__link" href="{{ route('company') }}">Company Profile</a>
                             </li><li class="Footer__link-list-item">
                                 <a class="Footer__link" href="#">Board Of Directors</a>
                             </li><li class="Footer__link-list-item">
